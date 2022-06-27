@@ -1,16 +1,17 @@
-import javax.swing.JOptionPane;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String name = JOptionPane.showInputDialog("Enter your name");
-        JOptionPane.showMessageDialog(null, "Hello " + name);
+        Random random = new Random();
 
-        int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
-        JOptionPane.showMessageDialog(null, "you are " + age + " years old");
+        int die = random.nextInt(6)+1;
+        double y = random.nextDouble();
+        boolean coinFlip = random.nextBoolean();
 
-        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height (in ft)"));
-        JOptionPane.showMessageDialog(null, "you are " + height + " feet tall");
+        System.out.println(die);
+        System.out.println(y);
+        System.out.println(coinFlip);
     }
 }
